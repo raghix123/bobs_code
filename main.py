@@ -1,8 +1,11 @@
+import bob
 import ch1
 import ch2
 
-ch1.moveIntoPosition()
-ch1.run()
+bob = bob.Bob()
 
-ch2.moveIntoPosition()
-ch2.run()
+ch1.moveIntoPosition(bob)
+ch1.solve(bob)
+
+ch2.moveIntoPosition(bob)
+ch2.solve(bob)

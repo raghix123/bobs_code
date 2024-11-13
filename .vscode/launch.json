@@ -1,4 +1,4 @@
-{
+/*{
     "version": "0.2.0",
     "configurations": [
         {
@@ -9,4 +9,4 @@
             "args": ["run", "ble", "${file}"],
         }
     ]
-}
+}*/
