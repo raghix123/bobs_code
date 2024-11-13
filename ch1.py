@@ -1,9 +1,9 @@
 import bob
 
-def moveIntoPosition():
+def moveIntoPosition(bob):
     print("moving...")
 
-def run():
+def solve(bob):
     print("running challenge 1")
     bob.move(5)
     bob.turnRight(10)
