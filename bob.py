@@ -7,16 +7,22 @@ from pybricks.tools import wait
 class Bob:
     hub = any
     drivebase = any
-
-    bottom_motor_left = any
-    bottom_motor_right = any
     top_motor_left = any
     top_motor_right = any
-    
+    bottom_motor_left= any
+    bottom_motor_right = any
+    color_sensor = any
+    front_motor = any
 
     def __init__(self):
-        print("Init")
-        # Define your robot here
+        hub = PrimeHub()
+        top_motor_left = Motor(Port.E)
+        top_motor_right = Motor(Port.F, positive_direction=Direction.COUNTERCLOCKWISE)
+        bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
+        bottom_motor_right = Motor(Port.D)
+        color_sensor = ColorSensor(Port.B)
+        front_motor = Motor(Port.A)
+        drivebase = DriveBase(bottom_motor_left, bottom_motor_right, 50, 145)
 
     def move(self, distance):
         print("move fwd " + str(distance))
