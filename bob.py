@@ -4,6 +4,16 @@ from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait
 
+class Bob:
+    hub = any
+    top_motor_left = any
+    top_motor_right = any
+    bottom_motor_left = any
+    bottom_motor_right = any
+    color_sensor = any
+    front_motor = any
+    drivebase = any
+    speed = any
 
 hub = PrimeHub()
 top_motor_left = Motor(Port.E)
