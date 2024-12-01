@@ -11,9 +11,9 @@ bob.forward(50)
 # 100 mm back
 bob.reverse(100)
 # turn 90d left
-
+bob.turn(-90)
 # turn 70d right
-
+bob.turn(70)
 # move front motor 20d
 
 bob.beep(500, 500)

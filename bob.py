@@ -33,11 +33,10 @@ class Bob:
         print("move bwd " + str(distance))
         self.drivebase.straight(-1*distance,then=Stop.HOLD,wait=True)
 
-    def turnLeft(self, degree):
+    def turn(self, degree):
         print("turning left " + str(degree))
+        self.drivebase.turn(degree,then=Stop.HOLD,wait=True)
 
-    def turnRight(self, degree):
-        print("turning right " + str(degree))
 
     def stop_everything(self):
         self.top_motor_left.stop()
@@ -47,3 +46,6 @@ class Bob:
 
     def beep(self,frequency, time):
         self.hub.speaker.beep(frequency, time)
+
+    def front(self, degrees):
+        self.front_motor
