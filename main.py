@@ -4,8 +4,22 @@ import ch2
 
 bob = bob.Bob()
 
-ch1.moveIntoPosition(bob)
-ch1.solve(bob)
+bob.beep(250, 500)
 
-ch2.moveIntoPosition(bob)
-ch2.solve(bob)
+# 50 mm fwd
+bob.forward(50)
+# 100 mm back
+bob.reverse(100)
+# turn 90d left
+
+# turn 70d right
+
+# move front motor 20d
+
+bob.beep(500, 500)
+
+# ch1.moveIntoPosition(bob)
+# ch1.solve(bob)
+
+# ch2.moveIntoPosition(bob)
+# ch2.solve(bob)

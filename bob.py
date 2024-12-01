@@ -15,21 +15,23 @@ class Bob:
     front_motor = any
 
     def __init__(self):
-        hub = PrimeHub()
-        top_motor_left = Motor(Port.E)
-        top_motor_right = Motor(Port.F, positive_direction=Direction.COUNTERCLOCKWISE)
-        bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
-        bottom_motor_right = Motor(Port.D)
-        color_sensor = ColorSensor(Port.B)
-        front_motor = Motor(Port.A)
-        drivebase = DriveBase(bottom_motor_left, bottom_motor_right, 50, 145)
+        self.hub = PrimeHub()
+        self.top_motor_left = Motor(Port.E)
+        self.top_motor_right = Motor(Port.F, positive_direction=Direction.COUNTERCLOCKWISE)
+        self.bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
+        self.bottom_motor_right = Motor(Port.D)
+        self.color_sensor = ColorSensor(Port.B)
+        self.front_motor = Motor(Port.A)
+        self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
+        self.hub.speaker.volume(100)
 
-    def move(self, distance):
+    def forward(self, distance):
         print("move fwd " + str(distance))
-        stop_everything()
-        bottom_motor_left.run(-30)
-        bottom_motor_right.run(-30)
-        wait(3000)
+        self.drivebase.straight(distance,then=Stop.HOLD,wait=True)
+
+    def reverse(self, distance):
+        print("move bwd " + str(distance))
+        self.drivebase.straight(-1*distance,then=Stop.HOLD,wait=True)
 
     def turnLeft(self, degree):
         print("turning left " + str(degree))
@@ -37,8 +39,11 @@ class Bob:
     def turnRight(self, degree):
         print("turning right " + str(degree))
 
-    def stop_everything():
-        top_motor_left.stop()
-        bottom_motor_right.stop()
-        bottom_motor_left.stop()
-        top_motor_right.stop()
+    def stop_everything(self):
+        self.top_motor_left.stop()
+        self.bottom_motor_right.stop()
+        self.bottom_motor_left.stop()
+        self.top_motor_right.stop()
+
+    def beep(self,frequency, time):
+        self.hub.speaker.beep(frequency, time)
