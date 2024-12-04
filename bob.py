@@ -48,4 +48,5 @@ class Bob:
         self.hub.speaker.beep(frequency, time)
 
     def front(self, degrees):
-        self.front_motor
+        print("moving front motor " + str(degrees))
+        self.front_motor.run_time(100, 1000*degrees/100, then=Stop.HOLD,wait=True)
