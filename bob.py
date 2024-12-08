@@ -47,11 +47,10 @@ class Bob:
     def beep(self,frequency, time):
         self.hub.speaker.beep(frequency, time)
 
-    def front(self, degrees):
+    def frontmotor(self, degrees):
         print("moving front motor " + str(degrees))
-        self.front_motor.run_time(100, 1000*degrees/100, then=Stop.HOLD,wait=True)
+        self.front_motor.run_angle(100, degrees, then=Stop.HOLD,wait=True)
 
-    
     def leftmotor(self, degrees):
         print("moving lef topl motor " + str(degrees))
         self.top_motor_left.run_time(100, 1000*degrees/100, then=Stop.HOLD,wait=True)
