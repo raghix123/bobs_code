@@ -7,10 +7,8 @@ bob = bob.Bob()
 bob.beep(250, 500)
 print("Initialized: Starting now")
 
-ch1.moveIntoPosition(bob)
 ch1.solve(bob)
 
-ch2.moveIntoPosition(bob)
 ch2.solve(bob)
 
 bob.beep(500, 500)
