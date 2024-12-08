@@ -49,7 +49,7 @@ class Bob:
 
     def frontmotor(self, degrees):
         print("moving front motor " + str(degrees))
-        self.front_motor.run_time(100, 1000*degrees/100, then=Stop.HOLD,wait=True)
+        self.front_motor.run_angle(100, degrees, then=Stop.HOLD,wait=True)
 
     def leftmotor(self, degrees):
         print("moving lef topl motor " + str(degrees))
