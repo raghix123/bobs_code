@@ -17,4 +17,6 @@ collect_objects.solve(bob)
 
 # ch9.solve(bob)
 bob.beep(500, 500)
+
+
 print("Program has ended")
