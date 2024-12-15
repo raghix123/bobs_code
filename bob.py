@@ -20,8 +20,8 @@ class Bob:
         self.top_motor_right = Motor(Port.F, positive_direction=Direction.COUNTERCLOCKWISE)
         self.bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
         self.bottom_motor_right = Motor(Port.D)
-        self.color_sensor = ColorSensor(Port.B)
-        self.front_motor = Motor(Port.A)
+        #self.color_sensor = ColorSensor(Port.B)
+        #self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
 
