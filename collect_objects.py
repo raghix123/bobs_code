@@ -2,6 +2,23 @@ import bob
 
 
 def solve(bob):
+<<<<<<< HEAD
+=======
+    # bob.turn(-12)
+    # bob.forward(360)
+    # bob.topmotors(-91)
+    # bob.turn(28)
+    # bob.topmotors(90)
+    # bob.forward(120)
+    # bob.topmotors(-90)
+    # bob.turn(-25)
+    # bob.forward(100)
+    # bob.topmotors(90)
+    # bob.forward(100)
+    # bob.turn(45)
+    # bob.forward(25)
+    # bob.topmotors(-90)
+>>>>>>> 3d92ce5 (made it collect the 4 objects on the west side of the map)
 
     bob.turn(-12)
     bob.forward(360)
@@ -19,6 +36,7 @@ def solve(bob):
     bob.forward(55)
     bob.topmotors(-90)
     bob.turn(-50)
+<<<<<<< HEAD
     bob.reverse(750)
     bob.topmotors(180)
     #next
@@ -32,3 +50,6 @@ def solve(bob):
     bob.frontmotor(-200)
     bob.turn(-45)
     bob.reverse(400)
+=======
+    bob.reverse(750)
+>>>>>>> 3d92ce5 (made it collect the 4 objects on the west side of the map)
