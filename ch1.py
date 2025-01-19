@@ -4,10 +4,10 @@ def moveIntoPosition(bob):
     print("moving...")
 
 def solve(bob):
-    # # Run to Coral Tree
+    # # # Run to Coral Tree
     bob.forward(260)
 
-    # # Solve Coral Tree
+    # # # Solve Coral Tree
     bob.forward_and_left_front(69,60)
     bob.forward(75)
     bob.leftmotor(20)
@@ -16,36 +16,27 @@ def solve(bob):
     bob.forward(65)
     bob.leftmotor(-65)
 
-    # # Reversing away from Coral Tree
+    # # # Reversing away from Coral Tree
     bob.reverse(100)
 
-    # # Run to Coral Buds
+    # # # Run to Coral Buds
     bob.turn(90)
     bob.forward(300)
     bob.turn(-90)
     bob.forward(330)
     bob.turn(-90)
 
-    # # Solve Coral Buds
-    bob.forward(27)
+    # # # Solve Coral Buds
+    bob.forward(19)
     bob.leftmotor(-30)
     bob.forward(55)
     bob.leftmotor(50)
 
-    # Solve Mr. Raghav(aka sharky boi)
-    bob.turn(55)
-    bob.forward(30)
-    bob.leftmotor(-70)
+    # # Solve Mr. Raghav(aka sharky boi)
+    bob.turn(54)
+    bob.forward(50)
     
-    # Solve Scuba boi
-    bob.leftmotor(39)
-    bob.turn(-25)
-    bob.forward(100)
-    bob.leftmotor(25)
-    bob.turn(205)
-    bob.forward(200)
-    bob.turn(-80)
-    bob.reverse(50)
-    bob.forward(60)
-    bob.turn(10)
-    bob.leftmotor(-50)
+    # Solve Raise the mast
+    # bob.reverse(100)
+    # bob.turn(52.5)
+    # bob.reverse(100)
