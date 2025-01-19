@@ -13,7 +13,9 @@ print("Initialized: Starting now")
 
 # ch2.solve(bob)
 
-collect_objects.solve(bob)
+#collect_objects.solve(bob)
+
+ch9.solve(bob)
 
 # ch9.solve(bob)
 bob.beep(500, 500)
