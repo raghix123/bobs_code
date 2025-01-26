@@ -24,6 +24,7 @@ class Bob:
         #self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
+        # self.drivebase.use_gyro(True)
 
     def forward(self, distance):
         print("move fwd " + str(distance))

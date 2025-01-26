@@ -41,7 +41,7 @@ def solve(bob):
     bob.leftmotor(40)
     bob.reverse(50)
     bob.turn(50)
-    bob.reverizzrse(700)
+    bob.reverse(700)
     
     # Solve Raise the mast
     bob.forward(550)
