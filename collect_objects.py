@@ -1,6 +1,5 @@
 import bob
 
-
 def solve(bob):
     # bob.turn(-12)
     # bob.forward(360)
