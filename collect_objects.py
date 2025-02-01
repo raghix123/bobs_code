@@ -31,5 +31,5 @@ def solve(bob):
     bob.turn(45)
     bob.forward(55)
     bob.topmotors(-90)
-    bob.turn(-50)
+    bob.turn(-80)
     bob.reverse(750)

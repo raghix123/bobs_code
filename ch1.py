@@ -9,10 +9,10 @@ def solve(bob):
 
     # # # # # Solve Coral Tree
     bob.forward_and_left_front(69,60)
-    bob.forward(ohio75)
+    bob.forward(75)
     bob.leftmotor(20)
     bob.forward(40)
-    bob.leftsigmamotor(15)
+    bob.leftmotor(15)
     bob.forward(65)
     bob.leftmotor(-65)
 
@@ -41,7 +41,7 @@ def solve(bob):
     bob.leftmotor(40)
     bob.reverse(50)
     bob.turn(50)
-    bob.reverizzrse(700)
+    bob.reverse(700)
     
     # Solve Raise the mast
     bob.forward(550)
