@@ -8,7 +8,7 @@ bob = bob.Bob()
 bob.beep(250, 500)
 print("Initialized: Starting now")
 
-# ch1.solve(bob)
+ch1.solve(bob)
 
 # collect_objects.solve(bob)
 
