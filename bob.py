@@ -21,7 +21,7 @@ class Bob:
         self.bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
         self.bottom_motor_right = Motor(Port.D)
         #self.color_sensor = ColorSensor(Port.B)
-        self.front_motor = Motor(Port.A)
+        #self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
         # self.drivebase.use_gyro(True)
@@ -52,9 +52,9 @@ class Bob:
         print("moving front motor " + str(degrees))
         self.front_motor.run_angle(100, degrees, then=Stop.HOLD,wait=True)
 
-    def leftmotor(self, degrees):
+    def leftmotor(self, degrees, speed=100):
         print("moving lef topl motor " + str(degrees))
-        self.top_motor_left.run_angle(100, degrees, then=Stop.HOLD,wait=True)
+        self.top_motor_left.run_angle(speed, degrees, then=Stop.HOLD,wait=True)
 
     def rightmotor(self, degrees):
         print("moving right top motor " + str(degrees))
