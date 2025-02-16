@@ -2,6 +2,7 @@ import bob
 import ch1
 import ch9
 import collect_objects
+import straightgyrotesting
 
 bob = bob.Bob()
 
@@ -15,6 +16,9 @@ print("Initialized: Starting now")
 # ch9.solve(bob)
 
 # ch9.solve(bob)
+
+straightgyrotesting.solve(bob)
+
 bob.beep(500, 500)
 
 
