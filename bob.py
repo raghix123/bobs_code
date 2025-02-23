@@ -20,7 +20,7 @@ class Bob:
         self.top_motor_right = Motor(Port.F, positive_direction=Direction.COUNTERCLOCKWISE)
         self.bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
         self.bottom_motor_right = Motor(Port.D)
-        #self.color_sensor = ColorSensor(Port.B)
+        self.color_sensor = ColorSensor(Port.B)
         self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
@@ -44,6 +44,7 @@ class Bob:
         self.bottom_motor_right.stop()
         self.bottom_motor_left.stop()
         self.top_motor_right.stop()
+        self.front_motor.stop()
 
     def beep(self,frequency, time):
         self.hub.speaker.beep(frequency, time)
