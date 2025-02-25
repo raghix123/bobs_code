@@ -2,7 +2,6 @@ from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
-from pybricks.tools import wait
 
 class Bob:
     hub = any
@@ -21,7 +20,7 @@ class Bob:
         self.bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
         self.bottom_motor_right = Motor(Port.D)
         #self.color_sensor = ColorSensor(Port.B)
-        self.front_motor = Motor(Port.A)
+        #self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
         # self.drivebase.use_gyro(True)
