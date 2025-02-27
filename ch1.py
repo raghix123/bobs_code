@@ -32,7 +32,7 @@ def solve(bob):
     bob.forward(65)
     bob.leftmotor(50)
 
-    # # # # Solve Mr. Raghav(aka sharky boi)
+    # # # # Solve Mr. Diddyghav(aka sharky boi)
     bob.turn(49.6)
     bob.forward(43)
     bob.leftmotor(-63)
