@@ -21,7 +21,6 @@ TONES_RIGHT = [
 
 bob = bob.Bob()
 
-bob.beep(500, 500)
 
 def play_tones(tone):
     for freq, duration in tone:

@@ -1,4 +1,5 @@
 import bob
+from pybricks.tools import wait
 
 def moveIntoPosition(bob):
     print("moving...")

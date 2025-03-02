@@ -12,7 +12,7 @@ def solve (bob):
     #octopus challenge
     bob.frontmotor(190)
     bob.topmotors(-195)
-    bob.turn(-80)
+    bob.turn(-90)
     
     #fetch octopus
     bob.forward(125)
@@ -20,10 +20,21 @@ def solve (bob):
     #move the octopus
     bob.turn(-50)
     bob.forward(175)
-    bob.turn(30)
+    bob.turn(45)
     bob.forward(350)
     bob.turn(45)
+    bob.forward(50)
+    bob.topmotors(195)
+    bob.turn(-15)
     
-#doing kraken challenge
-    #bob.reverse(200)
-    #bob.turn(180)
+    #going to and doing angler fish
+    bob.reverse(100)
+    bob.turn(-30)
+    bob.topmotors(-195)
+    bob.forward(200)
+    bob.turn(-15)
+    bob.forward(55)
+    
+
+
+    
