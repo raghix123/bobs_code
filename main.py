@@ -4,6 +4,7 @@ import ch9
 from pybricks.parameters import Button
 from pybricks.tools import wait
 
+
 TONES_LEFT = [
     (220, 150),
     (400, 200),
@@ -21,6 +22,7 @@ TONES_RIGHT = [
 
 bob = bob.Bob()
 
+bob.beep(250, 500)
 
 def play_tones(tone):
     for freq, duration in tone:
