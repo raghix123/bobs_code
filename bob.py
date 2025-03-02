@@ -2,7 +2,6 @@ from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
-from pybricks.tools import wait
 
 class Bob:
     hub = any
@@ -53,9 +52,9 @@ class Bob:
         print("moving front motor " + str(degrees))
         self.front_motor.run_angle(100, degrees, then=Stop.HOLD,wait=True)
 
-    def leftmotor(self, degrees):
+    def leftmotor(self, degrees, speed=100):
         print("moving lef topl motor " + str(degrees))
-        self.top_motor_left.run_angle(100, degrees, then=Stop.HOLD,wait=True)
+        self.top_motor_left.run_angle(speed, degrees, then=Stop.HOLD,wait=True)
 
     def rightmotor(self, degrees):
         print("moving right top motor " + str(degrees))
@@ -69,3 +68,5 @@ class Bob:
     def forward_and_left_front(self, degrees, distance):
         self.top_motor_left.run_angle(100, degrees, then=Stop.HOLD,wait=False)
         self.drivebase.straight(distance,then=Stop.HOLD, wait=True)
+    
+    
