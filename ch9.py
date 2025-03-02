@@ -7,21 +7,34 @@ def solve (bob):
     bob.turn(45)
     bob.forward(82)
     bob.frontmotor(-190)
-    bob.reverse(300)
-
+    bob.reverse(230)
+    
     #octopus challenge
     bob.frontmotor(190)
     bob.topmotors(-195)
-    bob.turn(-120)
+    bob.turn(-90)
+    
     #fetch octopus
     bob.forward(125)
     bob.reverse(155)
-
     #move the octopus
-    bob.turn(-80)
-    bob.forward(300)
-    bob.turn(90)
+    bob.turn(-50)
+    bob.forward(175)
+    bob.turn(45)
+    bob.forward(350)
+    bob.turn(45)
+    bob.forward(50)
+    bob.topmotors(195)
+    bob.turn(-15)
+    
+    #going to and doing angler fish
+    bob.reverse(100)
+    bob.turn(-30)
+    bob.topmotors(-195)
     bob.forward(200)
-#doing kraken challenge
-    #bob.reverse(200)
-    #bob.turn(180)
+    bob.turn(-15)
+    bob.forward(55)
+    
+
+
+    
