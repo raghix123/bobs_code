@@ -1,61 +1,59 @@
 import bob
 import ch1
 import ch9
-from pybricks.tools import wait
 from pybricks.parameters import Button
+from pybricks.tools import wait
+
+TONES_LEFT = [
+    (220, 150),
+    (400, 200),
+    (500, 100),
+    (600, 120)
+]
+
+TONES_RIGHT = [
+    (600, 120),
+    (500, 100), 
+    (400, 200), 
+    (220, 150)
+]
 
 
 bob = bob.Bob()
 
-bob.beep(500, 500)
 
-# presses = 0
-# while presses < 2:
-#     if (bob.hub.buttons.pressed()):
-#         presses = presses + 1
-#     wait(10)
+def play_tones(tone):
+    for freq, duration in tone:
+        bob.hub.speaker.beep(freq, duration)
+        wait(duration // 2) 
 
-# if Button.LEFT in pressed:
-#     print("Left button was pressed")
-
+def any_button_pressed():
+    while True:
+        if Button.LEFT in bob.hub.buttons.pressed():
+            return Button.LEFT
+        elif Button.RIGHT in bob.hub.buttons.pressed():
+            return Button.RIGHT
+        else:
+            wait(10)
     
-#     tones_left = [
-#         (220, 150),
-#         (600, 120),
-#         (500, 100),
-#         (400, 200),
-#     ]
+ # First press
+button = any_button_pressed()
 
-#     for freq, duration in tones_left:
-#         bob.hub.speaker.beep(freq, duration)
-#         wait(duration // 2) 
+if button == Button.LEFT:
+    print("Left button was pressed")
 
-#     if Button.LEFT in pressed:
-#         ch1.solve(bob)
+    play_tones(TONES_LEFT)
 
-# elif Button.RIGHT in pressed:
-#     print("Right button was pressed")
+    button = any_button_pressed()
+    if button == Button.LEFT:
+        ch1.solve(bob)
+elif button == Button.RIGHT:
+    print("Right button was pressed")
+    
+    play_tones(TONES_RIGHT)
+    
+    button = any_button_pressed()
+    if button == Button.RIGHT:
+        ch9.solve(bob)
 
-
-#     tones_right = [
-#         (250, 100), 
-#         (700, 120), 
-#         (550, 100), 
-#         (450, 100), 
-#         (300, 150), 
-#     ]
-
-#     for freq, duration in tones_right:
-#         bob.hub.speaker.beep(freq, duration)
-#         wait(duration // 2) 
-
-#     ch9.solve(bob)
-
-
-# while any(bob.hub.buttons.pressed()):
-#     wait(10)
-
-# bob.beep(500, 500)
-
-
-ch1.solve(bob)
+bob.beep(250, 500)

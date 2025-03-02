@@ -68,5 +68,4 @@ class Bob:
     def forward_and_left_front(self, degrees, distance):
         self.top_motor_left.run_angle(100, degrees, then=Stop.HOLD,wait=False)
         self.drivebase.straight(distance,then=Stop.HOLD, wait=True)
-    
-    
+
