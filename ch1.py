@@ -9,7 +9,7 @@ def solve(bob):
     bob.forward(260)
 
     # # # # # Solve Coral Tree
-    bob.forward_and_left_front(69,60)
+    bob.forward_and_left_front(75,60)
     bob.forward(75)
     bob.leftmotor(20)
     bob.forward(40)
@@ -18,7 +18,7 @@ def solve(bob):
     bob.leftmotor(-65)
 
     # # # # # Reversing away from Coral Tree
-    bob.reverse(100)
+    bob.reverse(50)
 
     # # # # # Run to Coral Buds
     bob.turn(90)
