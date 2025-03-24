@@ -24,12 +24,12 @@ def solve(bob):
     bob.turn(90)
     bob.forward(299)
     bob.turn(-90)
-    bob.forward(303)
-    bob.turn(-90)
+    bob.forward(305)
+    bob.turn(-88)
 
     # # # Solve Coral Buds
     bob.leftmotor(-40,999999)
-    bob.forward(65)
+    bob.forward(60)
     bob.leftmotor(50)
 
     # # # # Solve Mr. Diddyghav(aka sharky boi)
