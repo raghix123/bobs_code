@@ -2,6 +2,7 @@ from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSensor
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
+from pybricks.tools import wait
 
 class Bob:
     hub = any
@@ -23,11 +24,19 @@ class Bob:
         self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
-        # self.drivebase.use_gyro(True)
 
     def forward(self, distance):
+        self.hub.imu.reset_heading(0)
+        wait(100)
+        target_heading = 0
+        correction_factor = 25
         print("move fwd " + str(distance))
         self.drivebase.straight(distance,then=Stop.HOLD,wait=True)
+        while True:
+            current_heading = self.hub.imu.heading()
+            error = current_heading - target_heading
+            turn_rate = -error * correction_factor
+            wait(50)
 
     def reverse(self, distance):
         print("move bwd " + str(distance))
@@ -68,4 +77,3 @@ class Bob:
     def forward_and_left_front(self, degrees, distance):
         self.top_motor_left.run_angle(100, degrees, then=Stop.HOLD,wait=False)
         self.drivebase.straight(distance,then=Stop.HOLD, wait=True)
-

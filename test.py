@@ -1,18 +1,9 @@
 import bob
+import ch1
+import ch9
+from pybricks.parameters import Button
+from pybricks.tools import wait
 
-def test(bob):
-    pressed = []
-    while not any(pressed):
-        pressed = bob.hub.buttons.pressed()
-        wait(10)
+bob = bob.Bob()
 
-    if bob.Button.LEFT in pressed:
-        print("Left button was pressed")
-    elif bob.Button.RIGHT in pressed:
-        print("Right button was pressed")
-
-
-    while any(bob.hub.buttons.pressed()):
-       wait(10)
-
-test()
+bob.forward(10000)
