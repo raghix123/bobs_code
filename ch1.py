@@ -5,6 +5,7 @@ def moveIntoPosition(bob):
     print("moving...")
 
 def solve(bob):
+    bob.stopbuttonc()
     # # # # Run to Coral Tree
     bob.forward(261)
 
@@ -36,12 +37,16 @@ def solve(bob):
     bob.turn(50)
     bob.forward(19)
     bob.leftmotor(-69,9999999)
+    bob.leftmotor(70)
 
+    # # # # # Send over the submersible
     #go back to spawn
-    bob.leftmotor(40)
-    bob.reverse(50)
-    bob.turn(55)
-    bob.reverse(700)
+    # bob.leftmotor(40)
+    # bob.reverse(50)
+    # bob.turn(55)
+    # bob.reverse(700)
+
+    bob.stopbuttonn()
     
     # Solve Raise the mast
     # bob.forward(550)

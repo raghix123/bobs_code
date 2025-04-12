@@ -2,6 +2,7 @@ import bob
 
 
 def solve (bob):
+    bob.stopbuttonc()
     #moving to banana boat
     bob.forward(405)
     bob.turn(45)
@@ -34,7 +35,8 @@ def solve (bob):
     bob.forward(200)
     bob.turn(-15)
     bob.forward(55)
-    
 
-
-    
+    #return to spawn
+    bob.turn(10)
+    bob.reverse(900)
+    bob.stopbuttonn()

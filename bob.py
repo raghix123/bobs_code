@@ -3,6 +3,7 @@ from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSenso
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 
+
 class Bob:
     hub = any
     drivebase = any
@@ -23,7 +24,20 @@ class Bob:
         self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
+        self.hub.system.set_stop_button(None)
         # self.drivebase.use_gyro(True)
+
+    def stopbuttonc(self):
+        print("Center button has been set to stop program")
+        self.hub.system.set_stop_button(Button.CENTER)
+
+    def stopbuttonl(self):
+        print("Center button has been set to stop program")
+        self.hub.system.set_stop_button(Button.LEFT)
+
+
+    def stopbuttonn(self):
+        print("There is no stop button. Remove the battery to stop")
 
     def forward(self, distance):
         print("move fwd " + str(distance))
