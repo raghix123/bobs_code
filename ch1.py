@@ -25,24 +25,26 @@ def solve(bob):
     bob.turn(90)
     bob.forward(295)
     bob.turn(-90)
-    bob.forward(306)
-    bob.turn(-88)
+    bob.forward(303)
+    bob.turn(-87)
 
     # # # Solve Coral Buds
-    bob.leftmotor(-40,999999)
-    bob.forward(64)
+    bob.leftmotor(-32.5,999999)
+    bob.forward(63)
     bob.leftmotor(50)
 
     # # # # Solve Mr. Diddyghav(aka sharky boi)
     bob.turn(50)
     bob.forward(19)
-    bob.leftmotor(-69,9999999)
+    bob.leftmotor(-69,999999)
     bob.leftmotor(70)
 
     # # # # # Send over the submersible
     #go back to spawn
-    # bob.leftmotor(40)
-    # bob.reverse(50)
+    bob.leftmotor(100)
+    bob.reverse(150)
+    bob.turn(75)
+    bob.reverse(550)
     # bob.turn(55)
     # bob.reverse(700)
 
@@ -53,3 +55,4 @@ def solve(bob):
     # bob.turn(95)
     # bob.forward(40)
     # bob.leftmotor(200)
+    exit()
