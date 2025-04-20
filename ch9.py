@@ -1,6 +1,5 @@
 import bob
 
-
 def solve (bob):
     bob.stopbuttonc()
     #moving to banana boat
@@ -40,3 +39,4 @@ def solve (bob):
     bob.turn(10)
     bob.reverse(900)
     bob.stopbuttonn()
+    exit()
