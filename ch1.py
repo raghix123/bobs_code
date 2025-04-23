@@ -25,11 +25,11 @@ def solve(bob):
     bob.turn(90)
     bob.forward(295)
     bob.turn(-90)
-    bob.forward(303)
+    bob.forward(290)
     bob.turn(-87)
 
     # # # Solve Coral Buds
-    bob.leftmotor(-32.5,999999)
+    bob.leftmotor(-32.5,999)
     bob.forward(63)
     bob.leftmotor(50)
 
@@ -44,7 +44,17 @@ def solve(bob):
     bob.leftmotor(100)
     bob.reverse(150)
     bob.turn(75)
-    bob.reverse(550)
+    bob.forward(100)
+    bob.turn(42.5)
+    bob.forward(250)
+    bob.leftmotor(-150)
+    bob.forward(150)
+    bob.turn(-15)
+    bob.leftmotor(40, 99999)
+    bob.leftmotor(-30)
+    bob.turn(60)
+    bob.forward(500)
+    # bob.reverse(550)
     # bob.turn(55)
     # bob.reverse(700)
 
