@@ -11,7 +11,7 @@ def solve (bob):
     
     #octopus challenge
     bob.frontmotor(190)
-    bob.topmotors(-195)
+    bob.topmotors(-95)
     bob.turn(-90)
     
     #fetch octopus

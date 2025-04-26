@@ -54,7 +54,7 @@ def solve(bob):
     wait(5000)
     bob.leftmotor(-30)
     bob.turn(80)
-    bob.forward(1000)
+    bob.forward(1050)
     # bob.reverse(550)
     # bob.turn(55)
     # bob.reverse(700)

@@ -12,7 +12,7 @@ class Bob:
     bottom_motor_left= any
     bottom_motor_right = any
     color_sensor = any
-    front_motor = any
+    # front_motor = any
 
     def __init__(self):
         self.hub = PrimeHub()
@@ -21,7 +21,7 @@ class Bob:
         self.bottom_motor_left = Motor(Port.C, positive_direction=Direction.COUNTERCLOCKWISE)
         self.bottom_motor_right = Motor(Port.D)
         self.color_sensor = ColorSensor(Port.B)
-        self.front_motor = Motor(Port.A)
+        # self.front_motor = Motor(Port.A)
         self.drivebase = DriveBase(self.bottom_motor_left, self.bottom_motor_right, 56, 143)
         self.hub.speaker.volume(100)
         self.hub.system.set_stop_button(None)
@@ -57,14 +57,14 @@ class Bob:
         self.bottom_motor_right.stop()
         self.bottom_motor_left.stop()
         self.top_motor_right.stop()
-        self.front_motor.stop()
+        # self.front_motor.stop()
 
     def beep(self,frequency, time):
         self.hub.speaker.beep(frequency, time)
 
     def frontmotor(self, degrees):
         print("moving front motor " + str(degrees))
-        self.front_motor.run_angle(100, degrees, then=Stop.HOLD,wait=True)
+        # self.front_motor.run_angle(100, degrees, then=Stop.HOLD,wait=True)
 
     def leftmotor(self, degrees, speed=100):
         print("moving lef topl motor " + str(degrees))
