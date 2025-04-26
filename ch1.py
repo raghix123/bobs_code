@@ -23,14 +23,14 @@ def solve(bob):
 
     # # # # # Run to Coral Buds
     bob.turn(90)
-    bob.forward(295)
+    bob.forward(297)
     bob.turn(-90)
-    bob.forward(303)
+    bob.forward(297)
     bob.turn(-87)
 
     # # # Solve Coral Buds
-    bob.leftmotor(-32.5,999999)
-    bob.forward(63)
+    bob.leftmotor(-32.5,999)
+    bob.forward(61)
     bob.leftmotor(50)
 
     # # # # Solve Mr. Diddyghav(aka sharky boi)
@@ -44,7 +44,18 @@ def solve(bob):
     bob.leftmotor(100)
     bob.reverse(150)
     bob.turn(75)
-    bob.reverse(550)
+    bob.forward(100)
+    bob.turn(42.5)
+    bob.forward(250)
+    bob.leftmotor(-150)
+    bob.forward(150)
+    bob.turn(-17)
+    bob.leftmotor(35, 99999)
+    wait(5000)
+    bob.leftmotor(-30)
+    bob.turn(80)
+    bob.forward(1000)
+    # bob.reverse(550)
     # bob.turn(55)
     # bob.reverse(700)
 
