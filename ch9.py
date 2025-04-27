@@ -34,6 +34,7 @@ def solve (bob):
     bob.forward(200)
     bob.turn(-15)
     bob.forward(55)
+    bob.topmotors(92)
 
     #return to spawn
     bob.turn(10)
