@@ -24,17 +24,17 @@ def solve (bob):
     bob.forward(350)
     bob.turn(45)
     bob.forward(50)
-    bob.topmotors(195)
+    bob.topmotors(92)
     bob.turn(-15)
     
     #going to and doing angler fish
     bob.reverse(100)
     bob.turn(-30)
-    bob.topmotors(-195)
+    bob.topmotors(-90)
     bob.forward(200)
     bob.turn(-15)
     bob.forward(55)
-    bob.topmotors(92)
+    # bob.topmotors(92)
 
     #return to spawn
     bob.turn(10)
